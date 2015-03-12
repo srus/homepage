@@ -271,11 +271,11 @@ main {
 
   .app-bar-container {
     display: block;
-    height: 130px;
+    // height: 130px;
     max-width: 864px;
     padding: 0 16px;
     box-sizing: border-box;
-    background-color: #4285f4;
+    background-color: white;
   }
 
   .app-bar .logo {
@@ -304,6 +304,7 @@ main {
 
   .navdrawer-container {
     position: relative;
+    opacity: 0;
     width: 100%;
     height: auto;
     margin-top: 0;
