@@ -58,8 +58,7 @@ body.open {
   margin: 0 auto;
 }
 
-.app-bar.open,
-.app-bar.open ~ main {
+.app-bar.open {
   -webkit-transform: translate(250px, 0);
           transform: translate(250px, 0);
 }
@@ -265,8 +264,7 @@ main {
     position: relative;
   }
 
-  .app-bar.open,
-  .app-bar.open ~ main {
+  .app-bar.open {
     -webkit-transform: translate(0px, 0);
             transform: translate(0px, 0);
   }
