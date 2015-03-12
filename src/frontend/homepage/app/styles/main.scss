@@ -40,7 +40,7 @@ body.open {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #4285f4;
+  background-color: white;
   overflow: hidden;
   z-index: 1;
 }
@@ -147,14 +147,14 @@ ol {
 }
 
 .navdrawer-container {
-  z-index: 1;
+  z-index: 4;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 250px;
   height: 100%;
-  background-color: #3367D6;
-  color: #fefefe;
+  background-color: white;
+  color: inherit;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
   overflow-y: auto;
@@ -193,7 +193,8 @@ main {
 .navdrawer-container ul li a {
   display: block;
   text-decoration: none;
-  color: white;
+  color: $colorGrayDark;
+  font-weight: 400;
   -webkit-transition: background-color 0.2s ease-out;
           transition: background-color 0.2s ease-out;
   white-space: nowrap;
@@ -221,6 +222,34 @@ main {
 
 .navdrawer-container ul li a:active {
   background-color: rgba(255, 255, 255, 0.4);
+}
+
+.ui-mask-modal {
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0.1;
+    top: 0;
+    visibility: hidden;
+    width: 100%;
+    z-index: 3;
+    position: fixed;
+    -webkit-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.ui-mask-modal.ui-mask-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0;
 }
 
 main {

@@ -25,12 +25,14 @@
   var body = document.body;
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
-  var main = querySelector('main');
+  // var main = querySelector('main');
+  var modal = querySelector('.ui-mask-modal');
 
   function closeMenu() {
     body.classList.remove('open');
     appbarElement.classList.remove('open');
     navdrawerContainer.classList.remove('open');
+    modal.classList.remove('ui-mask-visible');
   }
 
   function toggleMenu() {
@@ -38,9 +40,10 @@
     appbarElement.classList.toggle('open');
     navdrawerContainer.classList.toggle('open');
     navdrawerContainer.classList.add('opened');
+    modal.classList.add('ui-mask-visible');
   }
 
-  main.addEventListener('click', closeMenu);
+  modal.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
