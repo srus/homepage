@@ -21,22 +21,22 @@
 
   var querySelector = document.querySelector.bind(document);
 
-  var sideNav = querySelector('.side-nav');
   var body = document.body;
-  var appbarElement = querySelector('.header-bar');
+  var sideNav = querySelector('.side-nav');
+  var headerBar = querySelector('.header-bar');
   var menuBtn = querySelector('.menu');
   var modal = querySelector('.ui-mask-modal');
 
   function closeMenu() {
     body.classList.remove('open');
-    appbarElement.classList.remove('open');
+    headerBar.classList.remove('open');
     sideNav.classList.remove('open');
     modal.classList.remove('ui-mask-visible');
   }
 
   function toggleMenu() {
     body.classList.toggle('open');
-    appbarElement.classList.toggle('open');
+    headerBar.classList.toggle('open');
     sideNav.classList.toggle('open');
     sideNav.classList.add('opened');
     modal.classList.add('ui-mask-visible');
