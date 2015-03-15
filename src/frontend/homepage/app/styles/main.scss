@@ -86,9 +86,10 @@ body {
             transition: background-color 0.2s ease-out;
     -webkit-tap-highlight-color: transparent;
 
-    img {
+    svg {
       height: 24px;
       width: 24px;
+      fill: $colorText;
     }
 
     &:hover {
@@ -178,7 +179,7 @@ body {
       a {
         display: block;
         text-decoration: none;
-        color: $colorGrayDark;
+        color: $colorText;
         font-weight: 400;
         white-space: nowrap;
         height: 60px;
