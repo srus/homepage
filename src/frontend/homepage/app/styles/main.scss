@@ -50,8 +50,8 @@ body {
   background-color: white;
   overflow: hidden;
   z-index: 1;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 
   .logo {
     -webkit-flex: 1;
@@ -82,8 +82,7 @@ body {
     border: none;
     padding: 0;
     display: inline-block;
-    -webkit-transition: background-color 0.2s ease-out;
-            transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s ease-out;
     -webkit-tap-highlight-color: transparent;
 
     svg {
@@ -149,8 +148,8 @@ body {
   }
 
   &.opened {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-            transition: transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
   }
 
   h4 {
@@ -185,8 +184,7 @@ body {
         height: 60px;
         padding: 17px 20px;
         line-height: 1.4;
-        -webkit-transition: background-color 0.2s ease-out;
-                transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s ease-out;
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.2);
@@ -210,8 +208,8 @@ main {
   /* Height of the header */
   padding: 60px 16px 16px 16px;
   min-height: 100%;
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
 }
 
 .ui-mask-modal {
@@ -224,20 +222,13 @@ main {
   width: 100%;
   z-index: 3;
   position: fixed;
-  -webkit-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  -moz-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
   transform: translateZ(0);
 
   &.ui-mask-visible {
     opacity: 1;
     visibility: visible;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
     transition-delay: 0;
   }
 }
@@ -312,8 +303,7 @@ main {
     overflow-y: auto;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
-    -webkit-transition: none;
-            transition: none;
+    transition: none;
 
     h4 {
       display: none;
