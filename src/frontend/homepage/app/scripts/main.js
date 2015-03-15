@@ -23,20 +23,17 @@
 
   var body = document.body;
   var sideNav = querySelector('.side-nav');
-  var headerBar = querySelector('.header-bar');
   var menuBtn = querySelector('.menu');
   var modal = querySelector('.ui-mask-modal');
 
   function closeMenu() {
     body.classList.remove('open');
-    headerBar.classList.remove('open');
     sideNav.classList.remove('open');
     modal.classList.remove('ui-mask-visible');
   }
 
   function toggleMenu() {
     body.classList.toggle('open');
-    headerBar.classList.toggle('open');
     sideNav.classList.toggle('open');
     sideNav.classList.add('opened');
     modal.classList.add('ui-mask-visible');

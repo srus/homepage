@@ -41,69 +41,33 @@ body {
   }
 }
 
-.header-bar {
-  display: block;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: white;
-  overflow: hidden;
-  z-index: 1;
-  transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-
-  button {
-    width: 60px;
-    height: 60px;
-    background-image: none;
-    background-color: transparent;
-    border: none;
-    padding: 0;
-    display: inline-block;
-    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-tap-highlight-color: transparent;
-
-    svg {
-      fill: $colorText;
-    }
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    &:focus {
-      background-color: rgba(255, 255, 255, 0.2);
-      outline: 0;
-    }
-
-    &:active {
-      background-color: rgba(255, 255, 255, 0.4);
-    }
-  }
-}
-
-.header-bar-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
+.menu {
+  width: 60px;
   height: 60px;
-  position: relative;
-  margin: 0 auto;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
+  background-image: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-tap-highlight-color: transparent;
 
-.header-bar-actions {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  z-index: 2;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  svg {
+    fill: $colorText;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  &:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    outline: 0;
+  }
+
+  &:active {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
 }
 
 .side-nav {
@@ -230,37 +194,8 @@ body {
     overflow-y: scroll;
   }
 
-  button.menu {
+  .menu {
     display: none;
-  }
-
-  .header-bar {
-    position: relative;
-
-    &.open {
-      -webkit-transform: translate(0px, 0);
-              transform: translate(0px, 0);
-    }
-
-    &::after {
-      content: ' ';
-      display: block;
-      height: 0;
-      overflow: hidden;
-      clear: both;
-    }
-  }
-
-  .header-bar-container {
-    display: block;
-    max-width: 864px;
-    padding: 0 16px;
-    box-sizing: border-box;
-    background-color: white;
-  }
-
-  .header-bar-actions {
-    float: right;
   }
 
   .side-nav {
