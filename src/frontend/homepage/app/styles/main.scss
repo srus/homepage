@@ -50,8 +50,8 @@ body {
   background-color: white;
   overflow: hidden;
   z-index: 1;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
   .logo {
     -webkit-flex: 1;
@@ -81,7 +81,7 @@ body {
     border: none;
     padding: 0;
     display: inline-block;
-    transition: background-color 0.2s ease-out;
+    transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-tap-highlight-color: transparent;
 
     svg {
@@ -146,8 +146,8 @@ body {
   }
 
   &.opened {
-    transition: -webkit-transform 0.2s ease-out;
-    transition: transform 0.2s ease-out;
+    transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   h4 {
@@ -182,7 +182,7 @@ body {
         height: 60px;
         padding: 17px 20px;
         line-height: 1.4;
-        transition: background-color 0.2s ease-out;
+        transition: background-color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
         &:hover {
           background-color: rgba(255, 255, 255, 0.2);
@@ -206,8 +206,8 @@ body {
   /* Height of the header */
   padding: 60px 16px 16px 16px;
   min-height: 100%;
-  transition: -webkit-transform 0.3s ease-out;
-  transition: transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ui-mask-modal {
