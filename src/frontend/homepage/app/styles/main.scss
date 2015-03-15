@@ -192,25 +192,22 @@ body {
   }
 
   .side-nav {
-    visibility: visible;
     position: relative;
     width: 100%;
     height: auto;
-    margin-top: 0;
-    overflow-y: auto;
-    -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
+    max-width: 864px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    visibility: visible;
+    transform: translate(0, 0);
     transition: none;
 
     ul {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
       max-width: 864px;
       margin: 0 auto;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
+      display: flex;
+      flex-direction: row;
+      float: right;
 
       li {
         border: none;
