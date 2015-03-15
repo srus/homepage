@@ -41,7 +41,7 @@ body {
   }
 }
 
-.app-bar {
+.header-bar {
   display: block;
   width: 100%;
   position: fixed;
@@ -103,7 +103,7 @@ body {
   }
 }
 
-.app-bar-container {
+.header-bar-container {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -116,7 +116,7 @@ body {
           flex-direction: row;
 }
 
-.app-bar-actions {
+.header-bar-actions {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -254,7 +254,7 @@ body {
     display: none;
   }
 
-  .app-bar {
+  .header-bar {
     position: relative;
 
     &.open {
@@ -279,7 +279,7 @@ body {
     }
   }
 
-  .app-bar-container {
+  .header-bar-container {
     display: block;
     // height: 130px;
     max-width: 864px;
@@ -288,7 +288,7 @@ body {
     background-color: white;
   }
 
-  .app-bar-actions {
+  .header-bar-actions {
     float: right;
   }
 

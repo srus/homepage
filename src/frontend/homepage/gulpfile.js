@@ -119,8 +119,8 @@ gulp.task('html', function () {
       ],
       // CSS Selectors for UnCSS to ignore
       ignore: [
-        /.navdrawer-container.open/,
-        /.app-bar.open/
+        /.side-nav.open/,
+        /.header-bar.open/
       ]
     })))
     // Concatenate And Minify Styles
