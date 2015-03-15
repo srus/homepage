@@ -25,7 +25,6 @@
   var body = document.body;
   var appbarElement = querySelector('.header-bar');
   var menuBtn = querySelector('.menu');
-  // var main = querySelector('main');
   var modal = querySelector('.ui-mask-modal');
 
   function closeMenu() {
