@@ -13,6 +13,7 @@
  */
 @import 'components/components';
 
+
 html,
 body {
   width: 100%;
@@ -183,6 +184,8 @@ body {
 
 /** Larger Screens - desktops and tablets **/
 @include wide {
+  $maxWidth: 864px;
+
   body {
     overflow-y: scroll;
   }
@@ -193,17 +196,16 @@ body {
 
   .side-nav {
     position: relative;
+    max-width: $maxWidth;
     width: 100%;
     height: auto;
-    max-width: 864px;
     margin: 0 auto;
-    box-sizing: border-box;
     visibility: visible;
     transform: translate(0, 0);
     transition: none;
 
     ul {
-      max-width: 864px;
+      max-width: $maxWidth;
       margin: 0 auto;
       display: flex;
       flex-direction: row;
@@ -216,8 +218,9 @@ body {
   }
 
   .main {
-    max-width: 864px;
-    padding-top: 0;
+    max-width: $maxWidth;
     min-height: initial;
+    box-sizing: border-box;
+    padding-top: 0;
   }
 }
