@@ -21,6 +21,13 @@ body {
   padding: 0;
 }
 
+.base,
+p,
+ul,
+ol {
+  font-size: 19px;
+}
+
 body {
   position: relative;
   font-family: 'Roboto Condensed', Helvetica, Arial, sans-serif;
@@ -28,10 +35,10 @@ body {
   background-color: #fff;
   box-sizing: border-box;
   min-height: 100%;
-}
 
-body.open {
-  overflow: hidden;
+  &.open {
+    overflow: hidden;
+  }
 }
 
 .app-bar {
@@ -43,6 +50,60 @@ body.open {
   background-color: white;
   overflow: hidden;
   z-index: 1;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
+
+  .logo {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    font-size: 2em;
+    line-height: 60px;
+    margin: 0 16px;
+    padding: 0;
+    color: #fefefe;
+    float: none;
+    max-width: none;
+    font-weight: 300;
+    display: initial;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-weight: normal;
+    }
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    background-image: none;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    display: inline-block;
+    -webkit-transition: background-color 0.2s ease-out;
+            transition: background-color 0.2s ease-out;
+    -webkit-tap-highlight-color: transparent;
+
+    img {
+      height: 24px;
+      width: 24px;
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    &:focus {
+      background-color: rgba(255, 255, 255, 0.2);
+      outline: 0;
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0.4);
+    }
+  }
 }
 
 .app-bar-container {
@@ -52,72 +113,132 @@ body.open {
   width: 100%;
   height: 60px;
   position: relative;
+  margin: 0 auto;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  margin: 0 auto;
-}
-
-.app-bar .logo {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  font-size: 2em;
-  line-height: 60px;
-  margin: 0 16px;
-  padding: 0;
-  color: #fefefe;
-  float: none;
-  max-width: none;
-  font-weight: 300;
-  display: initial;
-}
-
-.app-bar .logo a {
-  text-decoration: none;
-  color: inherit;
-  font-weight: normal;
 }
 
 .app-bar-actions {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  z-index: 2;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  z-index: 2;
 }
 
-.app-bar button {
-  width: 60px;
-  height: 60px;
-  background-image: none;
-  background-color: transparent;
-  border: none;
-  padding: 0;
-  display: inline-block;
-  -webkit-transition: background-color 0.2s ease-out;
-          transition: background-color 0.2s ease-out;
-  -webkit-tap-highlight-color: transparent;
+.navdrawer-container {
+  z-index: 4;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  color: inherit;
+  overflow-y: auto;
+  -webkit-transform: translate(-250px, 0);
+          transform: translate(-250px, 0);
+
+  &.open {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+
+  &.opened {
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+            transition: transform 0.3s ease-out;
+  }
+
+  h4 {
+    background-color: white;
+    color: #3367D6;
+    height: 60px;
+    padding: 17px 20px;
+    line-height: 1.4;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+
+    li {
+      border-bottom-style: solid;
+      border-width: 1px;
+      border-color: white;
+      padding: 0;
+
+      &::before {
+        content: none;
+      }
+
+      a {
+        display: block;
+        text-decoration: none;
+        color: $colorGrayDark;
+        font-weight: 400;
+        white-space: nowrap;
+        height: 60px;
+        padding: 17px 20px;
+        line-height: 1.4;
+        -webkit-transition: background-color 0.2s ease-out;
+                transition: background-color 0.2s ease-out;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        &:focus {
+          background-color: rgba(255, 255, 255, 0.3);
+          outline: 0;
+        }
+
+        &:active {
+          background-color: rgba(255, 255, 255, 0.4);
+        }
+      }
+    }
+  }
 }
 
-.app-bar button img {
-  height: 24px;
-  width: 24px;
+main {
+  margin: 0 auto;
+  /* Height of the header */
+  padding: 60px 16px 16px 16px;
+  min-height: 100%;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+          transition: transform 0.3s ease-out;
 }
 
-.app-bar button:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
+.ui-mask-modal {
+  background-color: rgba(0,0,0,0.5);
+  height: 100%;
+  left: 0;
+  opacity: 0.1;
+  top: 0;
+  visibility: hidden;
+  width: 100%;
+  z-index: 3;
+  position: fixed;
+  -webkit-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
 
-.app-bar button:focus {
-  background-color: rgba(255, 255, 255, 0.2);
-  outline: 0;
-}
-
-.app-bar button:active {
-  background-color: rgba(255, 255, 255, 0.4);
+  &.ui-mask-visible {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition-delay: 0;
+    -moz-transition-delay: 0;
+    transition-delay: 0;
+  }
 }
 
 .promote-layer {
@@ -133,135 +254,39 @@ body.open {
   backface-visibility: hidden;
 }
 
-.base,
-p,
-ul,
-ol {
-  font-size: 19px;
-}
-
-.navdrawer-container {
-  z-index: 4;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 250px;
-  height: 100%;
-  background-color: white;
-  color: inherit;
-  -webkit-transform: translate(-250px, 0);
-          transform: translate(-250px, 0);
-  overflow-y: auto;
-}
-
-.navdrawer-container.open {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-
-.app-bar,
-.navdrawer-container.opened,
-main {
-  -webkit-transition: -webkit-transform 0.3s ease-out;
-          transition: transform 0.3s ease-out;
-}
-
-.navdrawer-container h4,
-.navdrawer-container ul li a {
-  height: 60px;
-  padding: 17px 20px;
-  line-height: 1.4;
-}
-
-.navdrawer-container h4 {
-  background-color: white;
-  color: #3367D6;
-}
-
-.navdrawer-container ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-
-.navdrawer-container ul li a {
-  display: block;
-  text-decoration: none;
-  color: $colorGrayDark;
-  font-weight: 400;
-  -webkit-transition: background-color 0.2s ease-out;
-          transition: background-color 0.2s ease-out;
-  white-space: nowrap;
-}
-
-.navdrawer-container ul li {
-  border-bottom-style: solid;
-  border-width: 1px;
-  border-color: white;
-  padding: 0;
-}
-
-.navdrawer-container ul li::before {
-  content: none;
-}
-
-.navdrawer-container ul li a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.navdrawer-container ul li a:focus {
-  background-color: rgba(255, 255, 255, 0.3);
-  outline: 0;
-}
-
-.navdrawer-container ul li a:active {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.ui-mask-modal {
-    background-color: rgba(0,0,0,0.5);
-    height: 100%;
-    left: 0;
-    opacity: 0.1;
-    top: 0;
-    visibility: hidden;
-    width: 100%;
-    z-index: 3;
-    position: fixed;
-    -webkit-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    -moz-transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    -webkit-transform: translateZ(0);
-    -moz-transform: translateZ(0);
-    -ms-transform: translateZ(0);
-    -o-transform: translateZ(0);
-    transform: translateZ(0);
-}
-
-.ui-mask-modal.ui-mask-visible {
-    opacity: 1;
-    visibility: visible;
-    -webkit-transition-delay: 0;
-    -moz-transition-delay: 0;
-    transition-delay: 0;
-}
-
-main {
-  margin: 0 auto;
-  /* Height of the header */
-  padding: 60px 16px 16px 16px;
-  min-height: 100%;
-}
-
 /** Larger Screens - desktops and tablets **/
 @media all and (min-width: 990px) {
-  .app-bar {
-    position: relative;
+  body {
+    overflow-y: scroll;
   }
 
-  .app-bar.open {
-    -webkit-transform: translate(0px, 0);
-            transform: translate(0px, 0);
+  button.menu {
+    display: none;
+  }
+
+  .app-bar {
+    position: relative;
+
+    &.open {
+      -webkit-transform: translate(0px, 0);
+              transform: translate(0px, 0);
+    }
+
+    .logo {
+      float: left;
+      margin: 0;
+      padding: 0;
+      line-height: 130px;
+      font-size: 46px;
+    }
+
+    &::after {
+      content: ' ';
+      display: block;
+      height: 0;
+      overflow: hidden;
+      clear: both;
+    }
   }
 
   .app-bar-container {
@@ -273,28 +298,8 @@ main {
     background-color: white;
   }
 
-  .app-bar .logo {
-    float: left;
-    margin: 0;
-    padding: 0;
-    line-height: 130px;
-    font-size: 46px;
-  }
-
   .app-bar-actions {
     float: right;
-  }
-
-  .app-bar::after {
-    content: ' ';
-    display: block;
-    height: 0;
-    overflow: hidden;
-    clear: both;
-  }
-
-  button.menu {
-    display: none;
   }
 
   .navdrawer-container {
@@ -303,40 +308,36 @@ main {
     width: 100%;
     height: auto;
     margin-top: 0;
+    overflow-y: auto;
     -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
     -webkit-transition: none;
             transition: none;
-    overflow-y: auto;
-  }
 
-  .navdrawer-container h4 {
-    display: none;
-  }
+    h4 {
+      display: none;
+    }
 
-  .navdrawer-container ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    max-width: 864px;
-    margin: 0 auto;
-    -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+    ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      max-width: 864px;
+      margin: 0 auto;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
 
-  .navdrawer-container ul li {
-    border: none;
+      li {
+        border: none;
+      }
+    }
   }
 
   main {
     max-width: 864px;
     padding-top: 0;
     min-height: initial;
-  }
-
-  body {
-    overflow-y: scroll;
   }
 }
 
