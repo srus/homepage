@@ -21,7 +21,7 @@
 
   var querySelector = document.querySelector.bind(document);
 
-  var navdrawerContainer = querySelector('.navdrawer-container');
+  var sideNav = querySelector('.side-nav');
   var body = document.body;
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
@@ -31,21 +31,21 @@
   function closeMenu() {
     body.classList.remove('open');
     appbarElement.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
+    sideNav.classList.remove('open');
     modal.classList.remove('ui-mask-visible');
   }
 
   function toggleMenu() {
     body.classList.toggle('open');
     appbarElement.classList.toggle('open');
-    navdrawerContainer.classList.toggle('open');
-    navdrawerContainer.classList.add('opened');
+    sideNav.classList.toggle('open');
+    sideNav.classList.add('opened');
     modal.classList.add('ui-mask-visible');
   }
 
   modal.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
-  navdrawerContainer.addEventListener('click', function (event) {
+  sideNav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
       closeMenu();
     }

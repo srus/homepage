@@ -126,7 +126,7 @@ body {
           flex-direction: row;
 }
 
-.navdrawer-container {
+.side-nav {
   visibility: hidden;
   z-index: 4;
   position: fixed;
@@ -292,7 +292,7 @@ body {
     float: right;
   }
 
-  .navdrawer-container {
+  .side-nav {
     position: relative;
     opacity: 0;
     width: 100%;
