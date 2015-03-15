@@ -32,7 +32,7 @@ body {
   position: relative;
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   font-weight: 400;
-  background-color: #fff;
+  background-color: white;
   box-sizing: border-box;
   min-height: 100%;
 
@@ -73,15 +73,15 @@ body {
 }
 
 .side-nav {
-  visibility: hidden;
-  z-index: 4;
-  position: fixed;
   top: 0;
   bottom: 0;
   width: 250px;
   height: 100%;
+  position: fixed;
+  visibility: hidden;
   background-color: white;
   overflow-y: auto;
+  z-index: 4;
   -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
 
@@ -149,7 +149,6 @@ body {
 
 .main {
   margin: 0 auto;
-  /* Height of the header */
   padding: 60px 16px 16px 16px;
   min-height: 100%;
   transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
