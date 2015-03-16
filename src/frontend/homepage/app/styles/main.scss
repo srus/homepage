@@ -201,20 +201,16 @@ body {
 
   .side-nav {
     position: relative;
-    max-width: $maxWidth;
     width: 100%;
     height: auto;
-    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
     visibility: visible;
     transform: translate(0, 0);
     transition: none;
 
     ul {
-      max-width: $maxWidth;
-      margin: 0 auto;
       display: flex;
-      flex-direction: row;
-      float: right;
 
       li {
         border: none;
@@ -223,7 +219,6 @@ body {
   }
 
   .main {
-    max-width: $maxWidth;
     box-sizing: border-box;
   }
 }
