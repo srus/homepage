@@ -85,11 +85,12 @@ body {
   background-color: white;
   overflow-y: auto;
   z-index: 4;
-          transform: translate(-250px, 0);
+  transform: translate(-250px, 0);
+  will-change: transform, visibility;
 
   &.open {
     visibility: visible;
-            transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   &.opened {
@@ -157,25 +158,13 @@ body {
   z-index: 3;
   position: fixed;
   transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: translateZ(0);
+  will-change: opacity, visibility;
 
   &.ui-mask-visible {
     opacity: 1;
     visibility: visible;
     transition-delay: 0;
   }
-}
-
-.promote-layer {
-  /*
-  This may promote the layer to a composited
-  layer.
-
-  Replace with will-change when available
-
-  #perfmatters
-  */
-  backface-visibility: hidden;
 }
 
 /** Larger Screens - desktops and tablets **/
