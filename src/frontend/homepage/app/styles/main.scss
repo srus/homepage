@@ -83,17 +83,14 @@ body {
   background-color: white;
   overflow-y: auto;
   z-index: 4;
-  -webkit-transform: translate(-250px, 0);
           transform: translate(-250px, 0);
 
   &.open {
     visibility: visible;
-    -webkit-transform: translate(0, 0);
             transform: translate(0, 0);
   }
 
   &.opened {
-    transition: -webkit-transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
@@ -144,7 +141,6 @@ body {
   margin: 0 auto;
   padding: 60px 16px 16px 16px;
   min-height: 100%;
-  transition: -webkit-transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -159,7 +155,6 @@ body {
   z-index: 3;
   position: fixed;
   transition: visibility 0 linear 0.4s,opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  -webkit-transform: translateZ(0);
   transform: translateZ(0);
 
   &.ui-mask-visible {
@@ -178,7 +173,6 @@ body {
 
   #perfmatters
   */
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
