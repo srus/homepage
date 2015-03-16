@@ -26,24 +26,17 @@
   var menuBtn = querySelector('.menu');
   var modal = querySelector('.ui-mask-modal');
 
-  function closeMenu() {
-    body.classList.remove('open');
-    sideNav.classList.remove('open');
-    modal.classList.remove('ui-mask-visible');
-  }
-
   function toggleMenu() {
     body.classList.toggle('open');
     sideNav.classList.toggle('open');
-    sideNav.classList.add('opened');
-    modal.classList.add('ui-mask-visible');
+    modal.classList.toggle('ui-mask-visible');
   }
 
-  modal.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
+  modal.addEventListener('click', toggleMenu);
   sideNav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      closeMenu();
+      toggleMenu();
     }
   });
-})();
+}());
