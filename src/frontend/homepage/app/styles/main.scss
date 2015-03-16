@@ -185,8 +185,6 @@ body {
 
 /** Larger Screens - desktops and tablets **/
 @include wide {
-  $maxWidth: 864px;
-
   body {
     overflow-y: scroll;
   }
