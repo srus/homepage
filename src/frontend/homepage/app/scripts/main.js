@@ -22,19 +22,19 @@
   var querySelector = document.querySelector.bind(document);
 
   var body = document.body;
-  var sideNav = querySelector('.side-nav');
+  var nav = querySelector('.nav');
   var menuBtn = querySelector('.menu');
   var modal = querySelector('.ui-mask-modal');
 
   function toggleMenu() {
     body.classList.toggle('open');
-    sideNav.classList.toggle('open');
+    nav.classList.toggle('open');
     modal.classList.toggle('ui-mask-visible');
   }
 
   menuBtn.addEventListener('click', toggleMenu);
   modal.addEventListener('click', toggleMenu);
-  sideNav.addEventListener('click', function (event) {
+  nav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
       toggleMenu();
     }
