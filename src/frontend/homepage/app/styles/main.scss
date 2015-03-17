@@ -144,12 +144,21 @@ body {
   }
 }
 
+.top,
+.bottom {
+  flex: 1 0 auto;
+}
+
+.bottom {
+  background-color: $colorCyan500;
+}
+
 .main-container {
   position: relative;
   width: 100%;
   display: flex;
   justify-content: center;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
   background-color: $colorCyan500;
 
   &::before {
@@ -157,7 +166,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 140px;
+    height: 85px;
     content: '';
     background-color: white;
   }
@@ -169,7 +178,6 @@ body {
   flex-direction: column;
   align-items: center;
   width: 350px;
-  margin-top: 55px;
   padding: 16px 16px 16px;
 
   p {
