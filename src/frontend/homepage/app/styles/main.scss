@@ -192,6 +192,15 @@ body {
   margin-bottom: 15px;
 }
 
+.icons {
+  display: flex;
+  justify-content: space-around;
+
+  svg {
+    margin: 15px;
+  }
+}
+
 .ui-mask-modal {
   background-color: rgba(0,0,0,0.5);
   height: 100%;
