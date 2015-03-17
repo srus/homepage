@@ -32,11 +32,17 @@
     modal.classList.toggle('ui-mask-visible');
   }
 
+  function closeMenu() {
+    body.classList.remove('open');
+    nav.classList.remove('open');
+    modal.classList.remove('ui-mask-visible');
+  }
+
   menuBtn.addEventListener('click', toggleMenu);
   modal.addEventListener('click', toggleMenu);
   nav.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
-      toggleMenu();
+      closeMenu();
     }
   });
 }());
