@@ -46,6 +46,10 @@ body {
   }
 }
 
+.header {
+  flex: 0 0 auto;
+}
+
 .menu {
   top: 0;
   left: 0;
@@ -83,6 +87,7 @@ body {
   width: 250px;
   height: 100%;
   position: fixed;
+  flex: 0 0 auto;
   visibility: hidden;
   background-color: white;
   overflow-y: auto;
@@ -144,7 +149,7 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  flex-grow: 1;
+  flex: 1 0 auto;
   background-color: $colorCyan500;
 
   &::before {
