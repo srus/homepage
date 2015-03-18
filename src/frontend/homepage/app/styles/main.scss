@@ -71,7 +71,7 @@ body {
   -webkit-tap-highlight-color: transparent;
 
   svg {
-    fill: $colorText;
+    fill: white;
   }
 
   &:hover {
@@ -290,6 +290,10 @@ body {
 
       li {
         border: none;
+
+        a {
+          color: white;
+        }
       }
     }
   }
