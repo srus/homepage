@@ -9,7 +9,7 @@ Sergio Rus personal website.
 - Virtualenv 1.11.6
 - Virtualenvwrapper 4.2
 - Ruby 2.2.0
-- Node.js 0.10.33
+- Node.js 0.12.0
 
 ## Project deployment
 
