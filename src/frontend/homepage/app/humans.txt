@@ -17,6 +17,6 @@ Last update: 2015/03/19
   Front-end Framework: Google Web Starter Kit https://github.com/google/web-starter-kit
   Technologies: HTML5, CSS3, JavaScript, Sass, Gulp, Virtualenv, Nodeenv, NVM,
                 RVM, Node.js, Ruby, Python, Gimp, Inkscape.
-  Other resources:
+  Other tools:
     SVGOMG: https://jakearchibald.github.io/svgomg/
     Google Fonts: http://www.google.com/fonts
