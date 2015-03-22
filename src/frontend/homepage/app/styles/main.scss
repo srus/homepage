@@ -98,12 +98,20 @@ body {
   height: 100%;
   position: fixed;
   flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
   visibility: hidden;
   background-color: white;
   overflow-y: auto;
   z-index: 4;
   transform: translate(-250px, 0);
   will-change: transform, visibility;
+
+  &::before {
+    content: ' ';
+    background-color: $primaryColor;
+    height: 100px;
+  }
 
   &.open {
     visibility: visible;
@@ -284,9 +292,9 @@ body {
     position: relative;
     width: 100%;
     height: auto;
-    background-color: $primaryColor;
-    display: flex;
+    flex-direction: row;
     justify-content: flex-end;
+    background-color: $primaryColor;
     visibility: visible;
     transform: translate(0, 0);
     transition: none;
