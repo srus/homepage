@@ -196,6 +196,7 @@ body {
 }
 
 @import '_index';
+@import '_article';
 
 /** Larger Screens - desktops and tablets **/
 @include wide {

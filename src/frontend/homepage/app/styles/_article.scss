@@ -1,0 +1,43 @@
+/* Article layout */
+
+$maxWidth: 700px;
+
+.article-header {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 200px;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.article-title {
+  max-width: $maxWidth;
+  width: 100%;
+
+  h1 {
+    margin: 0;
+    padding: 20px 16px;
+    font-weight: 300;
+    line-height: 35px;
+    font-size: 40px;
+  }
+}
+
+.article-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  background-color: white;
+
+  section {
+    max-width: $maxWidth;
+    width: 100%;
+    padding: 16px;
+  }
+}
+
+.article-footer {
+  flex-basis: 50px;
+}
