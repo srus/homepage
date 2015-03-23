@@ -52,7 +52,7 @@ body {
   }
 }
 
-.header {
+.topbar {
   flex: 0 0 auto;
   background-color: $primaryColor;
   z-index: 1;
@@ -165,17 +165,17 @@ body {
   }
 }
 
-.top,
-.bottom {
+.header,
+.footer {
   flex: 1 0 auto;
 }
 
-.top {
+.header {
   background-color: $primaryColor;
   z-index: 1;
 }
 
-.main-container {
+.hero-container {
   position: relative;
   width: 100%;
   display: flex;
@@ -195,7 +195,7 @@ body {
   }
 }
 
-.main {
+.hero {
   position: relative;
   display: flex;
   flex-direction: column;
