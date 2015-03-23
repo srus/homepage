@@ -1,6 +1,7 @@
 /* Article layout */
 
 $maxWidth: 700px;
+$paddingWidth: 16px;
 
 .article-header {
   display: flex;
@@ -16,7 +17,7 @@ $maxWidth: 700px;
 
   h1 {
     margin: 0;
-    padding: 20px 16px;
+    padding: 20px $paddingWidth;
     font-weight: 300;
     line-height: 35px;
     font-size: 40px;
@@ -34,7 +35,7 @@ $maxWidth: 700px;
   section {
     max-width: $maxWidth;
     width: 100%;
-    padding: 16px;
+    padding: $paddingWidth;
   }
 
   h2 {
@@ -44,5 +45,17 @@ $maxWidth: 700px;
 }
 
 .article-footer {
-  flex-basis: 50px;
+  display: flex;
+  padding: 40px $paddingWidth;
+  justify-content: center;
+  align-items: flex-end;
+
+  p {
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    font-style: italic;
+    max-width: $maxWidth;
+    margin: 0;
+    text-align: center;
+  }
 }
