@@ -19,8 +19,9 @@ $paddingWidth: 16px;
     margin: 0;
     padding: 20px $paddingWidth;
     font-weight: 300;
-    line-height: 35px;
+    line-height: 40px;
     font-size: 40px;
+    letter-spacing: -0.04em;
   }
 }
 
@@ -39,8 +40,8 @@ $paddingWidth: 16px;
   }
 
   h2 {
-    font-weight: 700;
-    font-size: 18px;
+    font-weight: 500;
+    font-size: 20px;
   }
 }
 
