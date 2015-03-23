@@ -1,0 +1,91 @@
+/* Index */
+
+.hero-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  background-color: white;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    content: '';
+    background-color: $primaryColor;
+    filter: drop-shadow(0 2px 4px $shadowColor);
+  }
+}
+
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 320px;
+  padding: 16px 16px 16px;
+
+  p {
+    font-family: 'Droid Serif', serif;
+    font-size: 23px;
+    color: rgba($colorText, 0.9);
+    text-align: center;
+    line-height: 35px;
+    margin: 15px 0;
+  }
+
+  b {
+    color: $colorText;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 4px solid white;
+  margin-bottom: 15px;
+  z-index: 1;
+  filter: grayscale(1) contrast(1.3) drop-shadow(0 2px 4px $shadowColor);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              -webkit-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, filter;
+
+  &:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 8px 4px $shadowColor);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+              -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform, filter;
+
+  }
+
+  a:hover {
+    transform: scale(1.2);
+    filter: drop-shadow(0px 4px 2px $shadowColor);
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                filter 0.2s cubic-bezier(0.4, 0, 0.2, 1),
+                -webkit-filter 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  svg {
+    width: 32px;
+    height: 32px;
+    margin: 15px;
+    fill: $colorCyan700;
+  }
+}
