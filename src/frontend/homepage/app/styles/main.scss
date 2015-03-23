@@ -5,6 +5,7 @@
  * Web Starter Kit team.
  *
  */
+
 @import '_h5bp';
 
 /*
@@ -13,12 +14,8 @@
  */
 @import 'components/components';
 
-/*
- * Some variables.
- */
-$primaryColor: $colorCyan500;
-$shadowColor: rgba(0,0,0,0.6);
 
+$primaryColor: $colorCyan500;
 
 html,
 body {
