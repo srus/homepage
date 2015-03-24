@@ -33,16 +33,16 @@ $paddingWidth: 16px;
   justify-content: center;
   background-color: white;
 
-  section {
-    max-width: $maxWidth;
-    width: 100%;
-    padding: $paddingWidth;
-  }
-
   h2 {
     font-weight: 500;
     font-size: 20px;
   }
+}
+
+.article-body {
+  max-width: $maxWidth;
+  width: 100%;
+  padding: $paddingWidth;
 }
 
 .article-footer {
