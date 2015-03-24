@@ -43,6 +43,11 @@ $paddingWidth: 16px;
   max-width: $maxWidth;
   width: 100%;
   padding: $paddingWidth;
+
+  .footnote {
+    display: block;
+    margin-top: 30px;
+  }
 }
 
 .article-footer {
@@ -51,12 +56,11 @@ $paddingWidth: 16px;
   justify-content: center;
   align-items: flex-end;
 
-  p {
-    font-size: 14px;
+  small {
+    margin: 0;
+    max-width: $maxWidth;
+    text-align: center;
     color: rgba(0,0,0,0.5);
     font-style: italic;
-    max-width: $maxWidth;
-    margin: 0;
-    text-align: center;
   }
 }
