@@ -112,17 +112,17 @@ gulp.task('html', function () {
     // Remove Any Unused CSS
     // Note: If not using the Style Guide, you can delete it from
     // the next line to only include styles your project uses.
-    .pipe($.if('*.css', $.uncss({
-      html: [
-        'app/index.html'
-        // 'app/styleguide.html'
-      ],
-      // CSS Selectors for UnCSS to ignore
-      ignore: [
-        /.side-nav.open/,
-        /.header-bar.open/
-      ]
-    })))
+    // .pipe($.if('*.css', $.uncss({
+    //   html: [
+    //     'app/index.html'
+    //     // 'app/styleguide.html'
+    //   ],
+    //   // CSS Selectors for UnCSS to ignore
+    //   // ignore: [
+    //   //   /.side-nav.open/,
+    //   //   /.header-bar.open/
+    //   // ]
+    // })))
     // Concatenate And Minify Styles
     // In case you are still using useref build blocks
     .pipe($.if('*.css', $.csso()))
@@ -181,7 +181,7 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://example.com',
+  url: 'https://www.sergiorus.com',
   strategy: 'mobile'
 }));
 
