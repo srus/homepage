@@ -5,9 +5,9 @@ Sergio Rus personal website.
 ## System requirements
 
 - Python 2.7.3
-- Pip 1.5.6
-- Virtualenv 1.11.6
-- Virtualenvwrapper 4.2
+- Pip 6.0.8
+- Virtualenv 12.0.7
+- Virtualenvwrapper 4.3.2
 - Ruby 2.2.0
 - Node.js 0.12.0
 
