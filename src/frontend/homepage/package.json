@@ -2,7 +2,7 @@
   "name": "homepage",
   "version": "1.0.0",
   "description": "Sergio Rus personal website",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "private": true,
   "main": "app/index.html",
   "devDependencies": {
