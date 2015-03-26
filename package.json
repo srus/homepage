@@ -7,7 +7,6 @@
   "dependencies": {},
   "devDependencies": {
     "bower": "^1.3.12",
-    "generator-mobile": "git://github.com/yeoman/generator-mobile",
     "generator-mocha": "^0.1.6",
     "grunt-cli": "^0.1.13",
     "gulp": "^3.8.11",
