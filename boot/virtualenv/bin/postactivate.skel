@@ -14,5 +14,3 @@ PATH="${proj_path}/node_modules/.bin/:$PATH"
 nvm use "{{node_version}}"
 
 rvm use "{{ruby_version}}@${proj_name}"
-
-clear
