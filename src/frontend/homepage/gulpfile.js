@@ -140,9 +140,18 @@ gulp.task('html', function () {
 // Static assets revisioning: unicorn.css → unicorn-098f6bcd.css
 gulp.task('rev', function () {
   return gulp.src(['dist/styles/*.css', 'dist/scripts/*.js'], {base: 'dist'})
+    .pipe(gulp.dest('dist'))
     .pipe($.rev())
     .pipe(gulp.dest('dist'))
-    .pipe($.rev.manifest())
+    .pipe($.rev.manifest('dist/rev-manifest.json', {base: 'dist'}))
+    .pipe(gulp.dest('dist'));
+});
+
+// Rewrite occurences of filenames which have been renamed by 'rev' task
+gulp.task('rev-replace', function () {
+  var manifest = gulp.src('dist/rev-manifest.json');
+  return gulp.src('dist/*.html')
+    .pipe($.revReplace({manifest: manifest}))
     .pipe(gulp.dest('dist'));
 });
 
@@ -183,6 +192,7 @@ gulp.task('default', ['clean'], function (cb) {
   runSequence('styles',
               ['jshint', 'html', 'images', 'fonts', 'copy'],
               'rev',
+              'rev-replace',
               cb);
 });
 
