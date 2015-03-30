@@ -137,6 +137,15 @@ gulp.task('html', function () {
     .pipe($.size({title: 'html'}));
 });
 
+// Static assets revisioning: unicorn.css → unicorn-098f6bcd.css
+gulp.task('rev', function () {
+  return gulp.src(['dist/styles/*.css', 'dist/scripts/*.js'], {base: 'dist'})
+    .pipe($.rev())
+    .pipe(gulp.dest('dist'))
+    .pipe($.rev.manifest())
+    .pipe(gulp.dest('dist'));
+});
+
 // Clean Output Directory
 gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git']));
 
@@ -171,7 +180,10 @@ gulp.task('serve:dist', ['default'], function () {
 
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
-  runSequence('styles', ['jshint', 'html', 'images', 'fonts', 'copy'], cb);
+  runSequence('styles',
+              ['jshint', 'html', 'images', 'fonts', 'copy'],
+              'rev',
+              cb);
 });
 
 // Run PageSpeed Insights
