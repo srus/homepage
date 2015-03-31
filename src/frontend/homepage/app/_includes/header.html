@@ -5,14 +5,14 @@
 <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="author" content="Sergio Rus">
 <link rel="author" href="humans.txt">
-<link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.canonical_url }}{% endif %}">
+<link rel="canonical" href="https://www.sergiorus.com{{ page.url }}">
 
 <!-- Twitter Summary Card https://dev.twitter.com/cards/types/summary -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sergiorus">
 <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-<meta name="twitter:url" content="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.canonical_url }}{% endif %}">
+<meta name="twitter:url" content="https://www.sergiorus.com{{ page.url }}">
 
 <!-- Add to homescreen -->
 <link rel="manifest" href="manifest.json">
