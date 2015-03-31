@@ -11,6 +11,10 @@ layout: default
 <main class="article-content" role="main">
   <section class="article-body" itemprop="articleBody">
     {{ content }}
+
+    {% if page.last_update %}
+      <small class="footnote">Last update: {{ page.last_update }}</small>
+    {% endif %}
   </section>
 </main>
 
