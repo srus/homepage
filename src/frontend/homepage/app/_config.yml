@@ -9,3 +9,9 @@ defaults:
       type: "pages"
     values:
       layout: "article"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "article"
