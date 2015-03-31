@@ -1,18 +1,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sergio Rus</title>
-<meta name="description" content="Hi, I'm Sergio. I'm a software engineer really excited about the Web Platform and web performance.">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
 <meta name="author" content="Sergio Rus">
 <link rel="author" href="humans.txt">
-<link rel="canonical" href="https://www.sergiorus.com">
+<link rel="canonical" href="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.canonical_url }}{% endif %}">
 
 <!-- Twitter Summary Card https://dev.twitter.com/cards/types/summary -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@sergiorus">
-<meta name="twitter:title" content="Sergio Rus">
-<meta name="twitter:description" content="Hi, I'm Sergio. I'm a software engineer really excited about the Web Platform and web performance.">
-<meta name="twitter:url" content="https://www.sergiorus.com">
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+<meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+<meta name="twitter:url" content="{% if page.canonical_url %}{{ page.canonical_url }}{% else %}{{ site.canonical_url }}{% endif %}">
 
 <!-- Add to homescreen -->
 <link rel="manifest" href="manifest.json">

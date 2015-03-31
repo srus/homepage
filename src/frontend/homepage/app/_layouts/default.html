@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" itemscope itemtype="https://schema.org/Person">
+<html lang="en" itemscope itemtype="{% if page.schema_type %}{{ page.schema_type }}{% else %}{{ site.schema_type }}{% endif %}">
   <head>
     {% include header.html %}
   </head>
@@ -15,8 +15,8 @@
     <nav class="nav">
       <ul>
         <li><a href="/">HOME</a></li>
-        <li><a href="/blog.html">BLOG</a></li>
-        <li><a href="/about.html">ABOUT</a></li>
+        <li><a href="/blog">BLOG</a></li>
+        <li><a href="/about">ABOUT</a></li>
       </ul>
     </nav>
 
