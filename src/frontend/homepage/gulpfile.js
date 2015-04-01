@@ -27,6 +27,7 @@ var runSequence = require('run-sequence');
 var browserSync = require('browser-sync');
 var pagespeed = require('psi');
 var reload = browserSync.reload;
+var exec = require('child_process').exec;
 
 var AUTOPREFIXER_BROWSERS = [
   'ie >= 10',
@@ -171,32 +172,50 @@ gulp.task('rev-replace', function () {
 // Clean Output Directory
 gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git']));
 
+// Build Jekyll site (development)
+gulp.task('jekyll', function (cb) {
+  exec('jekyll build --source app --destination dist/_site', function (err) {
+    if (err) cb(err);
+    cb();
+  });
+});
+
+// Build Jekyll site (production)
+gulp.task('jekyll:dist', function (cb) {
+  exec('jekyll build --source dist --destination dist/_site', function (err) {
+    if (err) cb(err);
+    cb();
+  });
+});
+
 // Watch Files For Changes & Reload
-gulp.task('serve', ['styles'], function () {
+gulp.task('serve', ['styles', 'jekyll'], function () {
   browserSync({
     notify: false,
     // Run as an https by uncommenting 'https: true'
     // Note: this uses an unsigned certificate which on first access
     //       will present a certificate warning in the browser.
     // https: true,
-    server: ['.tmp', 'app']
+    server: ['.tmp', 'dist/_site']
   });
 
-  gulp.watch(['app/**/*.html'], reload);
+  gulp.watch(['app/**/*.{html,md}'], ['jekyll', reload]);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
   gulp.watch(['app/images/**/*'], reload);
 });
 
 // Build and serve the output from the dist build
-gulp.task('serve:dist', ['default'], function () {
-  browserSync({
-    notify: false,
-    // Run as an https by uncommenting 'https: true'
-    // Note: this uses an unsigned certificate which on first access
-    //       will present a certificate warning in the browser.
-    // https: true,
-    server: 'dist'
+gulp.task('serve:dist', function () {
+  runSequence('default', 'jekyll:dist', function () {
+    browserSync({
+      notify: false,
+      // Run as an https by uncommenting 'https: true'
+      // Note: this uses an unsigned certificate which on first access
+      //       will present a certificate warning in the browser.
+      // https: true,
+      server: 'dist/_site'
+    });
   });
 });
 
