@@ -60,12 +60,11 @@ gulp.task('images', function () {
     .pipe($.size({title: 'images'}));
 });
 
-// Copy All Files At The Root Level (app)
+// Copy all files (not dirs) at the root level (app)
 gulp.task('copy', function () {
   return gulp.src([
     'app/*',
-    '!app/*.html',
-
+    '!app/_includes/*'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'))
@@ -77,6 +76,20 @@ gulp.task('fonts', function () {
   return gulp.src(['app/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
     .pipe($.size({title: 'fonts'}));
+});
+
+// Copy _layouts files
+gulp.task('layouts', function () {
+  return gulp.src(['app/_layouts/*'])
+    .pipe(gulp.dest('dist/_layouts'))
+    .pipe($.size({title: 'layouts'}));
+});
+
+// Copy _posts files
+gulp.task('posts', function () {
+  return gulp.src(['app/_posts/*'])
+    .pipe(gulp.dest('dist/_posts'))
+    .pipe($.size({title: 'posts'}));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -133,7 +146,7 @@ gulp.task('html', function () {
     // Minify Any HTML
     // .pipe($.if('*.html', $.minifyHtml()))
     // Output Files
-    .pipe(gulp.dest('dist'))
+    .pipe($.if('*.html', gulp.dest('dist/_includes'), gulp.dest('dist')))
     .pipe($.size({title: 'html'}));
 });
 
@@ -150,9 +163,9 @@ gulp.task('rev', function () {
 // Rewrite occurences of filenames which have been renamed by 'rev' task
 gulp.task('rev-replace', function () {
   var manifest = gulp.src('dist/rev-manifest.json');
-  return gulp.src('dist/*.html')
+  return gulp.src('dist/_includes/*.html')
     .pipe($.revReplace({manifest: manifest}))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/_includes'));
 });
 
 // Clean Output Directory
@@ -190,7 +203,7 @@ gulp.task('serve:dist', ['default'], function () {
 // Build Production Files, the Default Task
 gulp.task('default', ['clean'], function (cb) {
   runSequence('styles',
-              ['jshint', 'html', 'images', 'fonts', 'copy'],
+              ['jshint', 'html', 'images', 'fonts', 'layouts', 'posts', 'copy'],
               'rev',
               'rev-replace',
               cb);
