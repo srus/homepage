@@ -180,7 +180,7 @@ gulp.task('jekyll', function (cb) {
   });
 });
 
-// Build Jekyll site (production)
+// Build Jekyll site (assets compressed)
 gulp.task('jekyll:dist', function (cb) {
   exec('jekyll build --source dist --destination dist/_site', function (err) {
     if (err) cb(err);
@@ -188,7 +188,7 @@ gulp.task('jekyll:dist', function (cb) {
   });
 });
 
-// Watch Files For Changes & Reload
+// Serve the Jekyll site and watch files for changes & reload
 gulp.task('serve', ['styles', 'jekyll'], function () {
   browserSync({
     notify: false,
@@ -205,7 +205,7 @@ gulp.task('serve', ['styles', 'jekyll'], function () {
   gulp.watch(['app/images/**/*'], reload);
 });
 
-// Build and serve the output from the dist build
+// Serve the Jekyll site from the dist build
 gulp.task('serve:dist', function () {
   runSequence('default', 'jekyll:dist', function () {
     browserSync({
@@ -219,7 +219,7 @@ gulp.task('serve:dist', function () {
   });
 });
 
-// Build Production Files, the Default Task
+// Build site ready to be pushed to GitHub (assets compressed)
 gulp.task('default', ['clean'], function (cb) {
   runSequence('styles',
               ['jshint', 'html', 'images', 'fonts', 'layouts', 'posts', 'copy'],
