@@ -2,14 +2,14 @@
 layout: default
 ---
 
-<header class="header article-header">
-  <div class="article-title">
+<header class="header page-header">
+  <div class="page-title">
     <h1 itemprop="headline">{{ page.title }}</h1>
   </div>
 </header>
 
-<main class="article-content" role="main">
-  <section class="article-body" itemprop="articleBody">
+<main class="page-content" role="main">
+  <section class="page-body" itemprop="articleBody">
     {{ content }}
 
     {% if page.last_update %}
@@ -18,6 +18,6 @@ layout: default
   </section>
 </main>
 
-<footer class="footer article-footer">
+<footer class="footer page-footer">
   <small>Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0 License, and code samples are licensed under the Apache 2.0 License.</small>
 </footer>

@@ -7,13 +7,13 @@ defaults:
       path: ""
       type: "pages"
     values:
-      layout: "article"
+      layout: "page"
   -
     scope:
       path: ""
       type: "posts"
     values:
-      layout: "article"
+      layout: "page"
 paginate: 10
 paginate_path: "/blog/page:num/"
 permalink: "/blog/:title-:year:month:day/"
