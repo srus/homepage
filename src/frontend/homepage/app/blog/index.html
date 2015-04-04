@@ -1,13 +1,16 @@
 ---
 title: Blog
 description: Sergio Rus blog.
+schema_type: https://schema.org/Blog
 ---
 
 <h2>Latest posts</h2>
 
 <ul class="posts-listing">
   {% for post in paginator.posts %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a> <time class="date" datetime="{{ post.date | date: '%F' }}">{{ post.date | date_to_string }}</time></li>
+    <li itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+      <a href="{{ post.url }}" itemprop="url">{{ post.title }}</a> <time class="date" datetime="{{ post.date | date: '%F' }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+    </li>
   {% endfor %}
 </ul>
 

@@ -1,6 +1,5 @@
 title: "Sergio Rus"
 description: "Hi, I'm Sergio. I'm a software engineer really excited about the Web Platform and web performance."
-schema_type: "https://schema.org/Article"
 defaults:
   -
     scope:
