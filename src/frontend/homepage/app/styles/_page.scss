@@ -95,6 +95,7 @@ $paddingWidth: 16px;
   }
 
   .date {
+    display: none;
     flex: 0 0 auto;
     padding: 0 0 0 10px;
   }
@@ -106,5 +107,14 @@ $paddingWidth: 16px;
 
   a {
     padding: 10px;
+  }
+}
+
+/** Larger Screens - desktops and tablets **/
+@include wide {
+  .posts-listing {
+    .date {
+      display: inline;
+    }
   }
 }
