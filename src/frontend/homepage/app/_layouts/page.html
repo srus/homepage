@@ -9,7 +9,7 @@ layout: default
 </header>
 
 <main class="page-content" role="main">
-  <section class="page-body" {% if page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+  <section class="page-body" {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
     {{ content }}
 
     {% if page.last_update %}
