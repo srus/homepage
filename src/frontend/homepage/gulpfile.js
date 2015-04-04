@@ -200,6 +200,7 @@ gulp.task('serve', ['styles', 'jekyll'], function () {
     server: ['.tmp', 'dist/_site']
   });
 
+  gulp.watch(['app/_config.yml'], ['jekyll', reload]);
   gulp.watch(['app/**/*.{html,md}'], ['jekyll', reload]);
   gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
   gulp.watch(['app/scripts/**/*.js'], ['jshint']);
