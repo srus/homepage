@@ -29,6 +29,7 @@
   function toggleMenu() {
     body.classList.toggle('open');
     nav.classList.toggle('open');
+    nav.classList.add('opened');
     modal.classList.toggle('ui-mask-visible');
   }
 

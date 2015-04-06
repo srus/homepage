@@ -15,9 +15,13 @@
 @import 'components/components';
 
 
+/*==========  Variables  ==========*/
+
 $backgroundColor: $colorCyan500;
 $linkColor: $colorCyan800;
 $transitionTime: 0.3s;
+
+/*==========  Styles  ==========*/
 
 html,
 body {
@@ -78,7 +82,8 @@ body {
   width: 100%;
   z-index: 3;
   position: fixed;
-  transition: visibility 0 linear $transitionTime, opacity $transitionTime cubic-bezier(0.4, 0, 0.2, 1);
+  transition: visibility $transitionTime ease,
+              opacity $transitionTime cubic-bezier(0.4, 0, 0.2, 1);
   will-change: opacity, visibility;
 
   &.ui-mask-visible {
@@ -137,10 +142,10 @@ body {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  visibility: hidden;
   background-color: white;
   overflow-y: auto;
   z-index: 4;
+  visibility: hidden;
   transform: translate(-250px, 0);
   transition: transform $transitionTime cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, visibility;
@@ -152,8 +157,11 @@ body {
   }
 
   &.open {
-    visibility: visible;
     transform: translate(0, 0);
+  }
+
+  &.opened {
+    visibility: visible;
   }
 
   ul {
