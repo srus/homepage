@@ -81,6 +81,19 @@ $paddingWidth: 16px;
     display: block;
     padding-top: 10px;
   }
+
+  .social {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    padding-left: 80px;
+
+    .twitter {
+      iframe {
+        width: 90px !important;
+      }
+    }
+  }
 }
 
 .page-footer {
