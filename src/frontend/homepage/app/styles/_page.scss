@@ -61,6 +61,22 @@ $paddingWidth: 16px;
   width: 100%;
   padding: $paddingWidth;
 
+  .datetime {
+    display: flex;
+    justify-content: flex-end;
+    color: rgba(0,0,0,0.6);
+
+    span {
+      padding-right: 10px;
+
+      &::after {
+        content: '·';
+        padding-left: 10px;
+        font-weight: bold;
+      }
+    }
+  }
+
   .footnote {
     display: block;
     padding-top: 10px;

@@ -10,6 +10,13 @@ layout: default
 
 <main class="page-content" role="main">
   <section class="page-body" {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+    {% if page.schema_type == nil %}
+      <div class="datetime">
+        {% capture duration %}{{ content | number_of_words | divided_by: 200 }}{% endcapture %}
+        {% if duration != '0' %}<span>{{ duration }} min read</span>{% endif %}<time datetime="{{ page.date | date: '%F' }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>
+      </div>
+    {% endif %}
+
     {{ content }}
 
     {% if page.last_update %}
