@@ -141,6 +141,7 @@ body {
   overflow-y: auto;
   z-index: 4;
   transform: translate(-250px, 0);
+  transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   will-change: transform, visibility;
 
   &::before {
@@ -152,7 +153,6 @@ body {
   &.open {
     visibility: visible;
     transform: translate(0, 0);
-    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   ul {
