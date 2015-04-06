@@ -123,6 +123,16 @@ $paddingWidth: 16px;
 
   a {
     padding: 10px;
+
+    &.next-page::after {
+      content: '→';
+      padding-left: 5px;
+    }
+
+    &.previous-page::before {
+      content: '←';
+      padding-right: 5px;
+    }
   }
 }
 

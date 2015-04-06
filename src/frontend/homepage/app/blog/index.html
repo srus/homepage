@@ -16,9 +16,9 @@ schema_type: https://schema.org/Blog
 
 <div class="pagination">
   {% if paginator.previous_page %}
-    <a href="{{ paginator.previous_page_path | replace: 'index.html', '' }}">← Newer posts</a>
+    <a href="{{ paginator.previous_page_path | replace: 'index.html', '' }}" class="previous-page">Newer posts</a>
   {% endif %}
   {% if paginator.next_page %}
-    <a href="{{ paginator.next_page_path }}">Older posts →</a>
+    <a href="{{ paginator.next_page_path }}" class="next-page">Older posts</a>
   {% endif %}
 </div>
