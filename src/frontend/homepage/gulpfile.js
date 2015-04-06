@@ -202,9 +202,9 @@ gulp.task('serve', ['styles', 'jekyll'], function () {
 
   gulp.watch(['app/_config.yml'], ['jekyll', reload]);
   gulp.watch(['app/**/*.{html,md}'], ['jekyll', reload]);
-  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', reload]);
-  gulp.watch(['app/scripts/**/*.js'], ['jshint']);
-  gulp.watch(['app/images/**/*'], reload);
+  gulp.watch(['app/styles/**/*.{scss,css}'], ['styles', 'jekyll', reload]);
+  gulp.watch(['app/scripts/**/*.js'], ['jshint', 'jekyll', reload]);
+  gulp.watch(['app/images/**/*'], ['jekyll', reload]);
 });
 
 // Serve the Jekyll site from the dist build
