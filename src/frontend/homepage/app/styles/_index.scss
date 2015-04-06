@@ -53,7 +53,6 @@ $shadowColor: rgba(0,0,0,0.6);
   transition: transform 0.3s ease,
               filter 0.3s ease-in,
               -webkit-filter 0.3s ease-in;
-  will-change: transform, filter;
 
   &:hover {
   transform: scale(1.1);
