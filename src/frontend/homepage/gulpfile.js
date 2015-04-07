@@ -30,12 +30,8 @@ var reload = browserSync.reload;
 var exec = require('child_process').exec;
 
 var AUTOPREFIXER_BROWSERS = [
-  'ie >= 10',
-  'ie_mob >= 10',
-  'ff >= 30',
-  'chrome >= 34',
-  'safari >= 7',
-  'opera >= 23',
+  '> 5%',
+  'last 2 versions',
   'ios >= 7',
   'android >= 4.4',
   'bb >= 10'
