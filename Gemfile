@@ -1,5 +1,8 @@
 source "https://rubygems.org"
-ruby '2.2.0'
+ruby '2.1.1'  # See https://pages.github.com/versions.json
 
-gem 'sass', '~> 3.4.13'
-gem 'jekyll', '~> 2.5.3'
+require 'json'
+require 'open-uri'
+versions = JSON.parse(open('https://pages.github.com/versions.json').read)
+
+gem 'github-pages', versions['github-pages']
