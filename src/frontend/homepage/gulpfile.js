@@ -178,7 +178,7 @@ gulp.task('rev-replace', function () {
 });
 
 // Clean Output Directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git', '!dist/_posts', '!dist/.gitignore']));
 
 // Build Jekyll site (development)
 gulp.task('jekyll', function (cb) {
