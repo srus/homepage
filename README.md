@@ -8,7 +8,7 @@ Sergio Rus personal website.
 - Pip 6.0.8
 - Virtualenv 12.0.7
 - Virtualenvwrapper 4.3.2
-- Ruby 2.2.0
+- Ruby >= 2.1.1
 - Node.js 0.12.0
 
 ## Project deployment
