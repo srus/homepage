@@ -9,7 +9,7 @@ layout: default
 </header>
 
 <main class="page-content" role="main">
-  <section class="page-body" {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+  <section class="page-body">
     {% if page.schema_type == nil and page.date %}
       <div class="datetime">
         {% capture duration %}{{ content | number_of_words | divided_by: 200 }}{% endcapture %}
@@ -17,7 +17,9 @@ layout: default
       </div>
     {% endif %}
 
-    {{ content }}
+    <section {% if page.schema_type == nil or page.schema_type == "https://schema.org/Article" %}itemprop="articleBody"{% endif %}>
+      {{ content }}
+    </section>
 
     {% if page.last_update %}
       <small class="footnote">Last update: <time datetime="{{ page.last_update }}" itemprop="dateModified">{{ page.last_update }}</time></small>
