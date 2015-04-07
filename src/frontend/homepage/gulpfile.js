@@ -72,25 +72,39 @@ gulp.task('copy', function () {
     .pipe($.size({title: 'copy'}));
 });
 
-// Copy Web Fonts To Dist
+// Copy "fonts" folder
 gulp.task('fonts', function () {
   return gulp.src(['app/fonts/**'])
     .pipe(gulp.dest('dist/fonts'))
     .pipe($.size({title: 'fonts'}));
 });
 
-// Copy _layouts files
+// Copy "_layouts" folder
 gulp.task('layouts', function () {
   return gulp.src(['app/_layouts/*'])
     .pipe(gulp.dest('dist/_layouts'))
     .pipe($.size({title: 'layouts'}));
 });
 
-// Copy _posts files
+// Copy "_posts" folder
 gulp.task('posts', function () {
   return gulp.src(['app/_posts/*'])
     .pipe(gulp.dest('dist/_posts'))
     .pipe($.size({title: 'posts'}));
+});
+
+// Copy "about" folder
+gulp.task('about', function () {
+  return gulp.src(['app/about/*'])
+    .pipe(gulp.dest('dist/about'))
+    .pipe($.size({title: 'about'}));
+});
+
+// Copy "blog" folder
+gulp.task('blog', function () {
+  return gulp.src(['app/blog/*'])
+    .pipe(gulp.dest('dist/blog'))
+    .pipe($.size({title: 'blog'}));
 });
 
 // Compile and Automatically Prefix Stylesheets
@@ -224,7 +238,8 @@ gulp.task('serve:dist', function () {
 // Build site ready to be pushed to GitHub (assets compressed)
 gulp.task('default', ['clean'], function (cb) {
   runSequence('styles',
-              ['jshint', 'html', 'images', 'fonts', 'layouts', 'posts', 'copy'],
+              ['jshint', 'html', 'images', 'fonts', 'layouts', 'posts',
+               'about', 'blog', 'copy'],
               'rev',
               'rev-replace',
               cb);
