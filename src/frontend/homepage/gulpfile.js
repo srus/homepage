@@ -86,13 +86,6 @@ gulp.task('layouts', function () {
     .pipe($.size({title: 'layouts'}));
 });
 
-// Copy "_posts" folder
-gulp.task('posts', function () {
-  return gulp.src(['app/_posts/*'])
-    .pipe(gulp.dest('dist/_posts'))
-    .pipe($.size({title: 'posts'}));
-});
-
 // Copy "about" folder
 gulp.task('about', function () {
   return gulp.src(['app/about/*'])
@@ -238,8 +231,15 @@ gulp.task('serve:dist', function () {
 // Build site ready to be pushed to GitHub (assets compressed)
 gulp.task('default', ['clean'], function (cb) {
   runSequence('styles',
-              ['jshint', 'html', 'images', 'fonts', 'layouts', 'posts',
-               'about', 'blog', 'copy'],
+              [ 'jshint',
+                'html',
+                'images',
+                'fonts',
+                'layouts',
+                'about',
+                'blog',
+                'copy'
+              ],
               'rev',
               'rev-replace',
               cb);
