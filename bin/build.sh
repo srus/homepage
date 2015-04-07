@@ -6,8 +6,8 @@ proj_path="`pwd`"
 # Project name
 proj_name="`basename $proj_path`"
 
-# Ruby version
-ruby_version="`grep '^ruby ' Gemfile | awk '{print $2}' | cut -d"'" -f2`"
+# Ruby version used by GitHub Pages
+ruby_version="`wget -qO- https://pages.github.com/versions.json | egrep -o '"ruby":".+"' | cut -d'"' -f4`"
 
 # Node version
 node_version="`grep '"node":' package.json | awk '{print $2}' | tr -d '"<>='`"
