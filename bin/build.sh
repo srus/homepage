@@ -1,11 +1,5 @@
 #!/usr/bin/env bash
 
-# Current path
-proj_path="`pwd`"
-
-# Project name
-proj_name="`basename $proj_path`"
-
 # Prompt colors
 txtrst='\e[0m'     # text reset
 txtylw='\e[0;33m'  # regular yellow
@@ -31,6 +25,12 @@ test "$ruby_version" == "" && { echo "FATAL: Could not fetch Ruby version"; exit
 echo ""
 echo -e "${txtgrn}Using Ruby ${ruby_version} ...${txtrst}"
 echo ""
+
+# Current path
+proj_path="`pwd`"
+
+# Project name
+proj_name="`basename $proj_path`"
 
 # Check if dir exists
 if [[ ! -d "${proj_path}/conf" ]]; then
