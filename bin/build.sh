@@ -6,12 +6,6 @@ proj_path="`pwd`"
 # Project name
 proj_name="`basename $proj_path`"
 
-# Ruby version used by GitHub Pages
-ruby_version="`wget -qO- https://pages.github.com/versions.json | egrep -o '"ruby":".+"' | cut -d'"' -f4`"
-
-# Node version
-node_version="`grep '"node":' package.json | awk '{print $2}' | tr -d '"<>='`"
-
 # Prompt colors
 txtrst='\e[0m'     # text reset
 txtylw='\e[0;33m'  # regular yellow
@@ -22,6 +16,20 @@ bldgrn='\e[1;32m'  # bold green
 echo ""
 echo -en "${txtylw}Name of project's virtualenv: ${txtrst}"
 read venv_name
+echo ""
+
+# Node version
+node_version="`grep '"node":' package.json | awk '{print $2}' | tr -d '"<>='`"
+test "$node_version" == "" && { echo "FATAL: Could not fetch Node.js version"; exit 1; }
+echo ""
+echo -e "${txtgrn}Using Node.js ${node_version} ...${txtrst}"
+echo ""
+
+# Ruby version used by GitHub Pages
+ruby_version="`wget -qO- https://pages.github.com/versions.json | egrep -o '"ruby":".+"' | cut -d'"' -f4`"
+test "$ruby_version" == "" && { echo "FATAL: Could not fetch Ruby version"; exit 1; }
+echo ""
+echo -e "${txtgrn}Using Ruby ${ruby_version} ...${txtrst}"
 echo ""
 
 # Check if dir exists
