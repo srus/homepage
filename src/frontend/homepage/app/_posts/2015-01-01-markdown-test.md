@@ -15,7 +15,7 @@ description: Just a test to see how Markdown is rendered.
 
 This is a "Markdown test" post just to see how [Markdown](https://help.github.com/articles/markdown-basics/) is rendered.
 
-This is a new paragraph, and the following text would be rendered in the same line or, in case of <abbr title="GitHub Flavored Markdown">GFM</abbr>, in a new line: 
+This is a new paragraph, and the following text would be rendered in a new line:  
 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores magnam, dolorum excepturi nostrum vero asperiores hic error, odit dolorem architecto minus reprehenderit minima dignissimos omnis ratione illo ullam. Rem, voluptas.
 
 _italic_ and __bold__, or *italic* and **bold**.
@@ -123,28 +123,3 @@ Content Cell  | Content Cell
 | col 3 is      | some wordy text | $1600 |
 | col 2 is      | centered        |   $12 |
 | zebra stripes | are neat        |    $1 |
-
-## GitHub extras
-
-**Task lists**
-
-- [x] @mentions, #refs, [links](), **formatting**, and <del>tags</del> are supported
-- [x] list syntax is required (any unordered or ordered list supported)
-- [x] this is a complete item
-- [ ] this is an incomplete item
-
-- [ ] a bigger project
-  - [ ] first subtask #1234
-  - [ ] follow up subtask #4321
-  - [ ] final subtask cc @mention
-- [ ] a separate task
-
-**GitHub references**
-
-* SHA: a5c3785ed8d6a35868bc169f07e40e889087fd2e
-* User@SHA: jlord@a5c3785ed8d6a35868bc169f07e40e889087fd2e
-* User/Repository@SHA: jlord/sheetsee.js@a5c3785ed8d6a35868bc169f07e40e889087fd2e
-* #Num: #26
-* GH-Num: GH-26
-* User#Num: jlord#26
-* User/Repository#Num: jlord/sheetsee.js#2
