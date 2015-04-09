@@ -178,16 +178,24 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git', '!dist/_posts
 
 // Build Jekyll site (development)
 gulp.task('jekyll', function (cb) {
-  exec('jekyll build --source app --destination dist/_site', function (err) {
-    if (err) cb(err);
+  exec('jekyll build --source app --destination dist/_site', function (error, stdout, stderr) {
+    if (error !== null) {
+      console.log('stdout: ' + stdout);
+      console.log('stderr: ' + stderr);
+      throw error;
+    }
     cb();
   });
 });
 
 // Build Jekyll site (assets compressed)
 gulp.task('jekyll:dist', function (cb) {
-  exec('jekyll build --source dist --destination dist/_site', function (err) {
-    if (err) cb(err);
+  exec('jekyll build --source dist --destination dist/_site', function (error, stdout, stderr) {
+    if (error !== null) {
+      console.log('stdout: ' + stdout);
+      console.log('stderr: ' + stderr);
+      throw error;
+    }
     cb();
   });
 });
