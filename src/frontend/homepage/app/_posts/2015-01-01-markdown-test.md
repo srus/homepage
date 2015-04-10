@@ -5,13 +5,13 @@ description: Just a test to see how Markdown is rendered.
 
 ## Markdown basics
 
-### This a h3 heading
+### This is a h3 heading
 
-#### This a h4 heading
+#### This is a h4 heading
 
-##### This a h5 heading
+##### This is a h5 heading
 
-###### This a h6 heading
+###### This is a h6 heading
 
 This is a "Markdown test" post just to see how [Markdown](https://help.github.com/articles/markdown-basics/) is rendered.
 
