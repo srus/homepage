@@ -5,6 +5,8 @@ description: Just a test to see how Markdown is rendered.
 
 ## Markdown basics
 
+## This is a h2 heading
+
 ### This is a h3 heading
 
 #### This is a h4 heading
