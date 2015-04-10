@@ -32,6 +32,24 @@ body {
   padding: 0;
 }
 
+body {
+  position: relative;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: $fontHighlight;
+  font-size: $fontBase;
+  font-weight: 400;
+  color: $colorText;
+  background-color: white;
+  line-height: $lineHeight;
+
+  &.open {
+    overflow: hidden;
+  }
+}
+
 p,
 ul,
 ol {
@@ -52,24 +70,6 @@ a {
 
   &:hover {
     color: $linkColor;
-  }
-}
-
-body {
-  position: relative;
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-family: $fontHighlight;
-  font-size: $fontBase;
-  font-weight: 400;
-  color: $colorText;
-  background-color: white;
-  line-height: $lineHeight;
-
-  &.open {
-    overflow: hidden;
   }
 }
 
