@@ -73,6 +73,44 @@ a {
   }
 }
 
+pre {
+  font-size: 0.9em;
+  border: 1px solid rgba(0,0,0,0.1);
+  padding: 1em;
+  margin: 1em 0;
+}
+
+hr {
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0;
+}
+
+blockquote {
+  padding: 0 1em;
+  margin: 1em 0;
+  color: $colorGray;
+  border-left: 4px solid $colorGrayLight;
+
+  p {
+    margin: 0 !important;
+  }
+}
+
+table {
+  margin: 1em 0;
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 6px 13px;
+  }
+
+  tr {
+    border-top: 1px solid #ccc;
+  }
+}
+
 .ui-mask-modal {
   background-color: rgba(0,0,0,0.5);
   height: 100%;
