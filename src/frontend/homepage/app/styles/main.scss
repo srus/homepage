@@ -19,8 +19,8 @@
 
 $backgroundColor: $colorCyan500;
 $linkColor: $colorCyan800;
-$transitionTime: 0.3s;
-$cubicBezier: cubic-bezier(0.4, 0, 0.2, 1);
+$transitionDuration: 0.3s;
+$transitionFunction: cubic-bezier(0.4, 0, 0.2, 1);
 
 /*==========  Styles  ==========*/
 
@@ -83,8 +83,8 @@ a {
   width: 100%;
   z-index: 3;
   position: fixed;
-  transition: visibility $transitionTime ease,
-              opacity $transitionTime $cubicBezier;
+  transition: visibility $transitionDuration ease,
+              opacity $transitionDuration $transitionFunction;
   will-change: opacity, visibility;
 
   &.ui-mask-visible {
@@ -111,7 +111,7 @@ a {
   background-color: transparent;
   border: none;
   border-radius: 50%;
-  transition: background-color $transitionTime $cubicBezier;
+  transition: background-color $transitionDuration $transitionFunction;
   -webkit-tap-highlight-color: transparent;
 
   svg {
@@ -148,7 +148,7 @@ a {
   z-index: 4;
   visibility: hidden;
   transform: translate(-250px, 0);
-  transition: transform $transitionTime $cubicBezier;
+  transition: transform $transitionDuration $transitionFunction;
   will-change: transform, visibility;
 
   &::before {
@@ -190,7 +190,7 @@ a {
         height: 60px;
         padding: 17px 20px;
         line-height: 1.4;
-        transition: background-color $transitionTime $cubicBezier;
+        transition: background-color $transitionDuration $transitionFunction;
         -webkit-tap-highlight-color: transparent;
 
         &:hover {
