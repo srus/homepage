@@ -20,7 +20,7 @@ $paddingWidth: 16px;
     padding: 20px $paddingWidth;
     font-weight: 300;
     line-height: 40px;
-    font-size: 40px;
+    font-size: 2.5em;
     letter-spacing: -0.04em;
   }
 }
@@ -42,13 +42,28 @@ $paddingWidth: 16px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 1.4em;
     margin: 1em 0;
   }
 
   h3 {
-    font-size: 18px;
-    margin: 0.8em 0;
+    font-size: 1.2em;
+    margin: 1em 0;
+  }
+
+  h4 {
+    font-size: 1.1em;
+    margin: 1em 0;
+  }
+
+  h5 {
+    font-size: 1.05em;
+    margin: 1em 0;
+  }
+
+  h6 {
+    font-size: 1em;
+    margin: 1em 0;
   }
 
   p {
