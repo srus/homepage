@@ -24,8 +24,6 @@ _italic_ and __bold__, or *italic* and **bold**.
 
 > This is a blockquote.
 
-Code example:
-
     function test() {
       console.log("notice the blank line before this function?");
     }
