@@ -141,3 +141,7 @@ Content Cell  | Content Cell
 <div class="media-container">
   <iframe src="//www.slideshare.net/slideshow/embed_code/37585243" width="477" height="510" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/omerida/alchemy-markdownpandoc" title="Publishing alchemy with markdown and pandoc" target="_blank">Publishing alchemy with markdown and pandoc</a> </strong> from <strong><a href="//www.slideshare.net/omerida" target="_blank">Oscar Merida</a></strong> </div>
 </div>
+
+## Special HTML tags
+
+Keyboard shortcuts: <kbd>Ctrl-X</kbd>, <kbd>Ctrl-C</kbd>, etc.
