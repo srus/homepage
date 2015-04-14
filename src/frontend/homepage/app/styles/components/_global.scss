@@ -76,7 +76,7 @@ a {
 pre {
   font-size: 0.9em;
   padding: 1em;
-  margin: 1em 0;
+  margin: 0;
 }
 
 kbd {
@@ -111,7 +111,7 @@ blockquote {
 }
 
 table {
-  margin: 1em 0;
+  margin: 2em 0;
 
   th,
   td {
@@ -127,6 +127,7 @@ table {
 img,
 video {
   max-width: 100%;
+  margin: 1em 0;
 }
 
 // A responsive approach to handle embedded media content.
@@ -134,7 +135,7 @@ video {
 // https://developers.google.com/web/fundamentals/media/video/size-videos-correctly
 .media-container {
   position: relative;
-  margin: 1em 0;
+  margin: 2em 0;
   padding-bottom: 56.25%;
   padding-top: 30px;
   overflow: hidden;
