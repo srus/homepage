@@ -13,4 +13,4 @@ My personal website, powered by [Jekyll](http://jekyllrb.com/) and based on [Goo
 
 ## Project deployment
 
-Move to the same path as this file and run: `./bin/build.sh`
+Move to the same path as this file and run: `./bin/build.sh`. You can run this script both to install and update the project.
