@@ -85,19 +85,19 @@ source ~/.nvm/nvm.sh || { echo "FATAL: Could not install NVM"; exit 1; }
 nvm install $node_version
 
 echo ""
-echo -e "${txtgrn}Installing Node packages from root project...${txtrst}"
+echo -e "${txtgrn}Installing Node packages...${txtrst}"
 echo ""
 
-# Install Node dependencies from root project
-npm install || { echo "FATAL: Could not install root project Node packages"; exit 1; }
+# Install Node packages
+npm install || { echo "FATAL: Could not install Node packages"; exit 1; }
 
 echo ""
 echo -e "${txtgrn}Installing Node packages from front-end...${txtrst}"
 echo ""
 
-# Install Node dependencies from front-end
+# Install Node packages from front-end
 cd "${proj_path}/src/frontend/${proj_name}"
-npm install || { echo "FATAL: Could not install front-end Node packages"; exit 1; }
+npm install || { echo "FATAL: Could not install Node packages from front-end"; exit 1; }
 cd "$proj_path"
 
 echo ""
