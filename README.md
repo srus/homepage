@@ -4,13 +4,13 @@ My personal website, powered by [Jekyll](http://jekyllrb.com/) and based on [Goo
 
 ## System requirements
 
-- Python ^2.7.3
-- Pip ^6.0.8
-- Virtualenv ^12.0.7
-- Virtualenvwrapper ^4.3.2
-- Ruby ^2.1.1
-- Node.js ^0.12.0
+- [Python](https://www.python.org/)
+- [Pip](https://pypi.python.org/pypi/pip/)
+- [Virtualenv](https://pypi.python.org/pypi/virtualenv/)
+- [Virtualenvwrapper](https://pypi.python.org/pypi/virtualenvwrapper/)
 
 ## Project deployment
 
-Move to the same path as this file and run: `./bin/build.sh`. You can run this script both to install and update the project.
+1. Download this project.
+2. Move to the project root folder and run: `./bin/build.sh`. You can run this script whenever you need to update the project.
+3. Finally type `workon` and the name of your virtualenv to start working on your new project. See the [Virtualenvwrapper docs](http://virtualenvwrapper.readthedocs.org/) to learn more about the workflow with this virtual environments manager.
