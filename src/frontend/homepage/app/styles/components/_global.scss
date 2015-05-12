@@ -58,6 +58,12 @@ ol {
 
 p {
   margin: 1em 0;
+
+  code::before,
+  code::after {
+    letter-spacing: -0.2em;
+    content: "\00a0";
+  }
 }
 
 a {
@@ -71,6 +77,15 @@ a {
   &:hover {
     color: $linkColor;
   }
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 0.9em;
+  line-height: 1.45em;
 }
 
 pre {
