@@ -174,11 +174,11 @@ gulp.task('rev-replace', function () {
 });
 
 // Clean Output Directory
-gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git', '!dist/_posts', '!dist/.gitignore']));
+gulp.task('clean', del.bind(null, ['.tmp', 'dist/*', '!dist/.git', '!dist/_posts', '!dist/_drafts', '!dist/.gitignore']));
 
 // Build Jekyll site (development)
 gulp.task('jekyll', function (cb) {
-  exec('jekyll build --source app --destination dist/_site', function (error, stdout, stderr) {
+  exec('jekyll build --drafts --source app --destination dist/_site', function (error, stdout, stderr) {
     if (error !== null) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
@@ -190,7 +190,7 @@ gulp.task('jekyll', function (cb) {
 
 // Build Jekyll site (assets compressed)
 gulp.task('jekyll:dist', function (cb) {
-  exec('jekyll build --source dist --destination dist/_site', function (error, stdout, stderr) {
+  exec('jekyll build --drafts --source dist --destination dist/_site', function (error, stdout, stderr) {
     if (error !== null) {
       console.log('stdout: ' + stdout);
       console.log('stderr: ' + stderr);
