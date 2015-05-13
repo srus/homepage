@@ -4,5 +4,6 @@ _site/
 dist/
 node_modules/
 
-app/images/blog/
+app/_drafts/
 app/_posts/
+app/images/blog/
