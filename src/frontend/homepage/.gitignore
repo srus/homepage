@@ -1,7 +1,8 @@
-node_modules
-.sass-cache
-dist
-.tmp
-_site
+.sass-cache/
+.tmp/
+_site/
+dist/
+node_modules/
 
-app/_posts/*.md
+app/images/blog/
+app/_posts/
