@@ -146,13 +146,13 @@ video {
 }
 
 // A responsive approach to handle embedded media content.
-// Taken (and modified a bit) from:
-// https://developers.google.com/web/fundamentals/media/video/size-videos-correctly
+// Taken (and modified) from:
+// https://developers.google.com/web/fundamentals/design-and-ui/media/video#size-videos-correctly
 .media-container {
   position: relative;
   margin: 2em 0;
   padding-bottom: 56.25%;
-  padding-top: 30px;
+  padding-top: 0;
   overflow: hidden;
 
   iframe,
